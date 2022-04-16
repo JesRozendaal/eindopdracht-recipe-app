@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Fridge = () => {
+const LoginRegister = () => {
     return (
         <div>
 
@@ -8,4 +8,4 @@ const Fridge = () => {
     );
 };
 
-export default Fridge;
+export default LoginRegister;
