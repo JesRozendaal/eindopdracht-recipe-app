@@ -37,6 +37,13 @@ function App() {
             <Fridge />
           </Route>
         </Switch>
+
+        <footer className="outer-container">
+          <div className="inner-container">
+            © Jessica Rozendaal
+          </div>
+        </footer>
+
       </>
   );
 }
