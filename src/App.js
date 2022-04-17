@@ -38,7 +38,7 @@ function App() {
           </Route>
         </Switch>
 
-        <footer className="outer-container">
+        <footer className="outer-footer-container">
           <div className="inner-container">
             © Jessica Rozendaal
           </div>
