@@ -1,7 +1,8 @@
 import React from 'react';
 import './Home.css';
-import {Link} from "react-router-dom";
 import Navbar from "../../components/navigation/Navbar";
+import Textblock from "../../components/home/Textblock";
+import Imageblock from "../../components/home/Imageblock";
 import Plate from '../../assets/icons/restaurant_plate_cutlery_food_icon_210114.png';
 import QuestionMark from '../../assets/photos/Decision maker.jpg';
 import InsideFridge from '../../assets/photos/istockphoto-842160124-612x612.jpg';
@@ -27,50 +28,43 @@ const Home = () => {
 
                     <div className="container-home-blocks">
                         <section className="one=block">
-                            <article className="text-box">
-                                <p>Having trouble deciding what to eat tonight?</p>
-                                <p>Don't worry!</p>
-                                <p>Just fill in our decision maker and enjoy your evening.</p>
-                            </article>
-
-                            <article className="link-box">
-                                <Link to="/decision-maker">
-                                    <img src={QuestionMark} alt="question mark" height="225" width="355" className="image"/>
-                                    <span className="title-link">
-                                        <h4>Decision maker</h4>
-                                    </span>
-                                </Link>
-                            </article>
+                            <Textblock
+                                title="Having trouble deciding what to eat tonight?"
+                                text1="Don't worry!"
+                                text2="Just fill in our decision maker and enjoy your evening."
+                            />
+                            <Imageblock
+                                image={QuestionMark}
+                                alt="question mark"
+                                title="Decision maker"
+                                link="/decision-maker"
+                            />
                         </section>
-
                         <section className="one=block">
-                            <article className="link-box">
-                                <Link to="whats-in-your-fridge" className="link-home">
-                                <img src={InsideFridge} alt="fridge" height="225" width="355" className="image"/>
-                                    <span className="title-link">
-                                        <h4>What's in your fridge?</h4>
-                                    </span>
-                                </Link>
-                            </article>
-                            <article className="text-box">
-                                <p>Do you hate wasting food?</p>
-                                <p>Than try our recipe generator where you can fill in what food you've got left in your fridge.</p>
-                            </article>
+                            <Imageblock
+                                image={InsideFridge}
+                                alt="fridge"
+                                title="What's in your fridge?"
+                                link={"/fridge"}
+                                className="link-home"
+                            />
+                            <Textblock
+                                title="Do you hate wasting food?"
+                                text1="Than try our recipe generator where you can fill in what food you've got left in your fridge."
+                            />
                         </section>
-
-                       <section className="one=block">
-                           <article className="text-box">
-                               <p>Are you having a great day?</p>
-                               <p>Search through all our recipes and find what you want to eat tonight.</p>
-                           </article>
-                           <article className="link-box">
-                               <Link to="/recipes" className="link-home">
-                                   <img src={RecipeBook} alt="recipe book" height="225" width="355" className="image"/>
-                                   <span className="title-link">
-                                       <h4>All our recipes</h4>
-                                   </span>
-                               </Link>
-                           </article>
+                        <section className="one=block">
+                            <Textblock
+                                title="Are you having a great day?"
+                                text1="Search through all our recipes and find what you want to eat tonight."
+                            />
+                            <Imageblock
+                                image={RecipeBook}
+                                alt="recipe book"
+                                title="All our recipes"
+                                link={"/recipes"}
+                                className="link-home"
+                            />
                        </section>
                     </div>
                     </div>

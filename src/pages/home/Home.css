@@ -14,11 +14,6 @@ article {
     border-radius: 10px;
 }
 
-.image {
-    border-radius: 10px;
-    box-shadow: 3px 3px 4px #343A40;
-}
-
 .container-home-blocks {
     display: flex;
     /*flex-direction: row;*/
@@ -39,14 +34,6 @@ article {
     /*left: 0;*/
 }
 
-.text-box {
-    background-color: #FEFEFB;
-    width: 355px;
-    height: 225px;
-    text-align: center;
-    box-shadow: 3px 3px 4px #343A40;
-}
-
 .link-home{
     color:#343A40;
     text-shadow: 0px 3px 4px #343A40;
@@ -61,4 +48,9 @@ article {
     bottom: 10%;
     right: 0;
     padding: 15px;
+}
+
+.image {
+    border-radius: 10px;
+    box-shadow: 3px 3px 4px #343A40;
 }
