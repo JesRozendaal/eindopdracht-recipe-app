@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import Navbar from "../../components/navigation/Navbar";
+import Header from "../../components/header/Header";
 import Textblock from "../../components/home/Textblock";
 import Imageblock from "../../components/home/Imageblock";
 import Plate from '../../assets/icons/restaurant_plate_cutlery_food_icon_210114.png';
@@ -11,13 +11,10 @@ import RecipeBook from '../../assets/photos/All recipes.jpg';
 const Home = () => {
     return (
         <div>
-            <Navbar />
-
-            <header>
-                <div className="title-container">
-                    <h1>What will you be serving tonight?</h1>
-                </div>
-            </header>
+            <Header
+            title="What will you be serving tonight?"
+            className="header-home"
+            />
 
             <main>
                 <div className="outer-container">
@@ -38,6 +35,7 @@ const Home = () => {
                                 alt="question mark"
                                 title="Decision maker"
                                 link="/decision-maker"
+                                className="link-home-decision"
                             />
                         </section>
                         <section className="one=block">

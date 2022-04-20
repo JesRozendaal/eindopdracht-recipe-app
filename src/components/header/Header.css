@@ -6,10 +6,14 @@ ul {
     justify-content: space-between;
 }
 
-a {
+.nav-link {
     color: #F2A56F;
     font-size: 20px;
     text-decoration: none;
+}
+
+.header-home {
+    background: url('../../assets/photos/Header home.jpg') no-repeat center center fixed;
 }
 
 .outer-nav-container {
@@ -37,7 +41,7 @@ a {
 /*    flex-direction: column;*/
 /*    justify-content: flex-end;*/
 /*    align-items: flex-start;*/
-/*    background: url('../../assets/Navbar home.jpg') no-repeat center center fixed;*/
+/*    background: url('../../assets/Header home.jpg') no-repeat center center fixed;*/
 /*    background-size: cover;*/
 /*}*/
 
