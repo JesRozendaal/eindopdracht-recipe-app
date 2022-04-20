@@ -15,6 +15,13 @@ a {
   color: #343A40;
 }
 
+button {
+  color: #343A40;
+  background-color: #F2A56F;
+  border-radius: 10px;
+  border: 1px solid #343A40;
+}
+
 h1,
 h2,
 h3 {

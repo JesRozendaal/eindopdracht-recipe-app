@@ -1,0 +1,10 @@
+.recipe-box {
+    background-color: #FEFEFB;
+    height: 500px;
+    width: 350px;
+    box-shadow: 3px 3px 4px #343A40;
+}
+
+.image-recipes {
+    border-radius: 10px 10px 0 0;
+}
