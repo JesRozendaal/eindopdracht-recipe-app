@@ -10,7 +10,7 @@ import RecipeBook from '../../assets/photos/All recipes.jpg';
 
 const Home = () => {
     return (
-        <div>
+        <>
             <Header
             title="What will you be serving tonight?"
             className="header-home"
@@ -68,7 +68,7 @@ const Home = () => {
                     </div>
                 </div>
             </main>
-        </div>
+        </>
     );
 };
 
