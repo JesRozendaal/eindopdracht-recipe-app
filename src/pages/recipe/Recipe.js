@@ -4,6 +4,8 @@ import axios from "axios";
 import {Link} from "react-router-dom";
 import Header from "../../components/header/Header";
 import Home from "../../assets/icons/3643769-building-home-house-main-menu-start_113416.png";
+import Clock from "../../assets/icons/clock_96305.png";
+import Person from "../../assets/icons/favorite_person_icon_216781.png";
 
 const Recipe = () => {
     const[recipes, setRecipes] = useState(null);
@@ -34,27 +36,29 @@ const Recipe = () => {
                         <h2>All our recipes</h2>
                         <p>Search through all our recipes and find your favorite one.</p>
                         <p>Do you like to save your favorite recipe? Just <Link to="/login-register">log in or register</Link></p>
+
                         {recipes&&
-                        <section>
+                        <div className="container-recipes">
                             {recipes.map((posts) => {
                                 return (
-                                    <article key={posts.id} className="recipe-box">
-                                        <ul>
-                                            <li>
-                                                <img src={posts.image} alt="recipe" width="350px" className="image-recipes"/>
-                                                <p>{posts.title}</p>
-                                                <p>{posts.readyInMinutes}</p>
-                                                <p>{posts.servings}</p>
-                                            </li>
-                                        </ul>
+                                    <section key={posts.id}>
+                                    <article  className="recipe-box">
+                                        <img src={posts.image} alt="recipe" width="500px" height="250px" className="image-recipes"/>
+                                        <span className="container-text">
+                                            <h3>{posts.title}</h3>
+                                            <div className="text-recipes">
+                                                <p><img src={Clock} alt="clock" className="icons"/>{posts.readyInMinutes} min</p>
+                                                <p><img src={Person} alt="person" className="icons"/> {posts.servings} persons</p>
+                                            </div>
+                                        </span>
                                     </article>
+                                    </section>
+
                                 )
                             })
                             }
-                        </section>
+                        </div>
                         }
-                        <Link to="/">Back <img src={Home} alt="home icon" width="25px"/></Link>
-
                         <button type="button">
                             <strong>
                                 Previous
@@ -65,6 +69,7 @@ const Recipe = () => {
                                 Next
                             </strong>
                         </button>
+                        <Link to="/" className="link-back-home"><strong>Back</strong><img src={Home} alt="home icon" width="25px"/></Link>
                     </div>
                 </div>
             </main>
