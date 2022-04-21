@@ -47,6 +47,12 @@ p {
   font-size: 20px;
 }
 
+input {
+  border-radius: 10px;
+  border: 1px solid #343A40;
+  background-color: #E9ECEF;
+}
+
 footer {
   font-size: 14px;
   color: #F2A56F;
