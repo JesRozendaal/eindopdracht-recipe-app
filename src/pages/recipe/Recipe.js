@@ -1,27 +1,11 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import './Recipe.css';
-import axios from "axios";
 import {Link} from "react-router-dom";
 import Header from "../../components/header/Header";
 import Home from "../../assets/icons/3643769-building-home-house-main-menu-start_113416.png";
-import Clock from "../../assets/icons/clock_96305.png";
-import Person from "../../assets/icons/favorite_person_icon_216781.png";
+import Recipe1 from "../../components/recipes/Recipe1";
 
 const Recipe = () => {
-    const[recipes, setRecipes] = useState(null);
-
-    useEffect(() => {
-        async function fetchData() {
-            try {
-                const result = await axios.get(`https://api.spoonacular.com/recipes/random?apiKey=64b9d798657c4f318e70de4bdedc004b&number=10&type=main course`);
-                console.log(result.data);
-                setRecipes(result.data.recipes);
-            }catch (e) {
-                console.error(e);
-            }
-        }
-        fetchData();
-    },[]);
 
     return (
         <>
@@ -37,28 +21,10 @@ const Recipe = () => {
                         <p>Search through all our recipes and find your favorite one.</p>
                         <p>Do you like to save your favorite recipe? Just <Link to="/login-register">log in or register</Link></p>
 
-                        {recipes&&
-                        <div className="container-recipes">
-                            {recipes.map((posts) => {
-                                return (
-                                    <section key={posts.id}>
-                                    <article  className="recipe-box">
-                                        <img src={posts.image} alt="recipe" width="500px" height="250px" className="image-recipes"/>
-                                        <span className="container-text">
-                                            <h3>{posts.title}</h3>
-                                            <div className="text-recipes">
-                                                <p><img src={Clock} alt="clock" className="icons"/>{posts.readyInMinutes} min</p>
-                                                <p><img src={Person} alt="person" className="icons"/> {posts.servings} persons</p>
-                                            </div>
-                                        </span>
-                                    </article>
-                                    </section>
+                        <Recipe1
+                        nrOffRecipes="10"
+                        />
 
-                                )
-                            })
-                            }
-                        </div>
-                        }
                         <button type="button">
                             <strong>
                                 Previous
